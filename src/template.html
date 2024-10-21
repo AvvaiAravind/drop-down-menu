@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Drop Down Menu</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link
@@ -12,5 +12,51 @@
     />
     <!-- for using font awesome icons -->
   </head>
-  <body></body>
+  <body>
+    <nav aria-label="Primary Navigation">
+      <button
+        type="button"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="dropdown-menu"
+        class="dropdown-btn"
+        id="dropdown-btn"
+      >
+        Dropdown
+        <i class="fa-solid fa-caret-up"></i>
+      </button>
+    </nav>
+    <ul class="dropdown-menu" id="dropdown-menu" role="menu">
+      <li>
+        <a href="#create-new" role="menuitem"
+          ><i class="fa-solid fa-plus"></i>Create New</a
+        >
+      </li>
+      <li>
+        <a href="#all-draft" role="menuitem"
+          ><i class="fa-solid fa-folder"></i>All Drafts</a
+        >
+      </li>
+      <li>
+        <a href="#move-to" role="menuitem"
+          ><i class="fa-solid fa-copy"></i>Move To</a
+        >
+      </li>
+      <li>
+        <a href="#profile-settings" role="menuitem"
+          ><i class="fa-solid fa-user"></i>Profile Settings</a
+        >
+      </li>
+      <li>
+        <a href="#notification" role="menuitem"
+          ><i class="fa-solid fa-bell"></i>Notification</a
+        >
+      </li>
+      <li>
+        <a href="#settings" role="settings"
+          ><i class="fa-solid fa-gear"></i>Settings</a
+        >
+      </li>
+    </ul>
+  </body>
 </html>

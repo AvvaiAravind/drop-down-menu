@@ -1,6 +1,6 @@
-/*
- Basic reset
-*/
+/*Basic reset*/
+
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
 *,
 *::before,
@@ -46,3 +46,84 @@ h6 {
 #__next {
   isolation: isolate;
 } */
+
+:root {
+  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  --color: #166e67;
+  --gap: 20px;
+  --radius: 5px;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 30px;
+  background-color: #b3e6f4;
+  font-size: 1rem;
+  color: black;
+}
+
+.dropdown-btn {
+  width: 200px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  column-gap: var(--gap);
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: var(--radius);
+  border: none;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.dropdown-menu .fa-solid {
+  font-size: 1.1rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 200px;
+  box-shadow: var(--shadow);
+  margin-top: 0.3rem;
+  background: white;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+
+  transform: translateY(0.5rem);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0rem);
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow-down {
+  transform: rotate(180deg);
+  transition: all 0.2 ease;
+}
+.dropdown-menu li {
+  list-style-type: none;
+}
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+  padding: 0.8rem 1rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--color);
+  color: white;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+}
